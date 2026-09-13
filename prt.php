@@ -1,10 +1,8 @@
 <?php
 
-// Виведення всіх помилок під час розробки
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Масив статей
 $articles = [
     [
         'title' => 'How to Behave Yourself at the US Open',
@@ -44,13 +42,11 @@ $articles = [
     ]
 ];
 
-// Функція форматування статті
 function formatArticle(array $article): string
 {
     return "{$article['title']} — {$article['author']}";
 }
 
-// Обчислення загальної кількості переглядів
 $totalViews = 0;
 
 foreach ($articles as $article) {
@@ -94,7 +90,7 @@ foreach ($articles as $article) {
         <?php foreach ($articles as $article): ?>
 
             <?php
-            // Визначення статусу статті
+    
             if ($article['views'] > 100) {
                 $status = 'Популярна';
             } else {
